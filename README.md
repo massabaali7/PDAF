@@ -1,6 +1,8 @@
 # PDAF: Phonetic Debiasing Attention Framework for Speaker Verification
 Paper: https://arxiv.org/pdf/2409.05799
+
 Colab: https://colab.research.google.com/drive/11Pve_TOxcHxK1kQBZHRGdcpCim-EVH_7?usp=sharing
+
 This repository contains an implementation of a speaker verification pipeline using phoneme alignment and attention-based models. The code utilizes `torchaudio` for audio processing, a custom phoneme alignment module (`chairsu_align`), and a self-attention transformer model (`TransformerSelfAttention`).
 
 ## Features
@@ -53,16 +55,6 @@ The function `verify()` takes the speaker embeddings generated from `attn_model(
 - **`preprocess_attn_model(wav_path, target_sample_rate, emb_dim)`**: Extracts audio features, performs resampling, aligns phonemes, and returns input vectors needed for the model.
 - **`attn_model(audio)`**: Loads a self-attention transformer model from the checkpoint and generates an embedding for a given audio sample.
 - **`verify(audio1, audio2)`**: Uses cosine similarity to compare two speaker embeddings, determining whether they belong to the same speaker.
-
-## Example
-Below is an example output showing how two audio samples are processed and compared:
-
-```
-matched
-Cosine Similarity Score: 0.89
-```
-
-The result is a similarity score, indicating how similar the two audio files are based on speaker characteristics.
 
 ## Directory Structure
 The expected project directory structure:
