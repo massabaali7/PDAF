@@ -1,0 +1,16 @@
+# config.yaml
+
+data:
+  DATA_DIR: None
+  checkpoint_path: ./models/snapshot_lr_regularization120.pt
+  sample_rate: 16000
+
+inference:
+  mask_phoneme: False
+  emb_dim: 1024
+  d_model: 128
+  heads: 8 
+  threshold: 0.8
+  numSpks: 251
+  lambda_value: 0 # phonemes are included in the model when set to 1, and excluded when set to 0
+  
