@@ -3,7 +3,15 @@ Paper: https://arxiv.org/pdf/2409.05799
 
 Colab: https://colab.research.google.com/drive/11Pve_TOxcHxK1kQBZHRGdcpCim-EVH_7?usp=sharing
 
-This repository contains an implementation of a speaker verification pipeline using phoneme alignment and attention-based models. The code utilizes `torchaudio` for audio processing, a custom phoneme alignment module (`chairsu_align`), and a self-attention transformer model (`TransformerSelfAttention`).
+Speaker verification systems are crucial for authenticating identity
+through voice. Traditionally, these systems focus on comparing feature vectors, overlooking the speech’s content. However, this paper challenges this by highlighting the importance of phonetic dominance, a measure of the frequency or duration of phonemes, as a
+crucial cue in speaker verification. A novel Phoneme-Debiasing Attention Framework (PDAF) is introduced, integrating with existing
+attention frameworks to mitigate biases caused by phonetic dominance. PDAF adjusts the weighting for each phoneme and influences
+feature extraction, allowing for a more nuanced analysis of speech.
+This approach paves the way for more accurate and reliable identity
+authentication through voice. Furthermore, by employing various
+weighting strategies, we evaluate the influence of phonetic features
+on the efficacy of the speaker verification system.
 
 ## Features
 - **Phoneme alignment for audio**: Aligns audio files to extract phoneme-specific information.
